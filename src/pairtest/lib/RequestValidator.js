@@ -1,7 +1,7 @@
 import InvalidPurchaseException from './InvalidPurchaseException.js';
 
 export default class RequestValidator {
-  static validateRequest(accountId, totalTickets, adultTickets) {
+  static validateRequest(accountId, totalTickets, adultTickets, infantTickets) {
     if (!Number.isInteger(accountId) || accountId < 1) {
       throw new InvalidPurchaseException('Account ID must be a number that is greater than 0.');
     }
@@ -10,6 +10,9 @@ export default class RequestValidator {
     }
     if (adultTickets < 1) {
       throw new InvalidPurchaseException('Purchase must contain at least 1 Adult ticket.');
+    }
+    if (adultTickets < infantTickets) {
+      throw new InvalidPurchaseException('Cannot have more Infant Tickets than Adult Tickets.');
     }
   }
 }

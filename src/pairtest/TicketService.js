@@ -36,7 +36,12 @@ export default class TicketService {
       this.#totalNumberOfSeats += seats;
     });
 
-    RequestValidator.validateRequest(accountId, this.#totalNumberOfTickets, this.#tickets.ADULT);
+    RequestValidator.validateRequest(
+      accountId,
+      this.#totalNumberOfTickets,
+      this.#tickets.ADULT,
+      this.#tickets.INFANT,
+    );
 
     this.#paymentService.makePayment(accountId, this.#totalCost);
     this.#seatReservationService.reserveSeat(accountId, this.#totalNumberOfSeats);
