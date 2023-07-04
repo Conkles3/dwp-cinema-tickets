@@ -153,5 +153,12 @@ describe('TicketService', () => {
       expect(spyPaymentService).to.not.be.called;
       expect(spySeatReservationService).to.not.be.called;
     });
+    it('should not allow more infant tickets than adult ticket', () => {
+      const infants = new TicketTypeRequest('INFANT', 2);
+      const adults = new TicketTypeRequest('ADULT', 1);
+      expect(() => { ticketService.purchaseTickets(1, infants, adults); }).to.throw(InvalidPurchaseException, 'Cannot have more Infant Tickets than Adult Tickets.');
+      expect(spyPaymentService).to.not.be.called;
+      expect(spySeatReservationService).to.not.be.called;
+    });
   });
 });
