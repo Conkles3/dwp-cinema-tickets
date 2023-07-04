@@ -3,14 +3,18 @@
   "description": "This is a coding exercise which will allow you to demonstrate how you code and your approach to a given problem.",
   "version": "1.0.0",
   "engines": {
-    "node": ">=16.15.1"
+    "node": ">=18.16.0"
   },
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "security:outdated-packages": "check-outdated --ignore-pre-releases --columns name,type,current,latest",
+    "ncu": "npx npm-check-updates -u"
   },
   "devDependencies": {
-    "jest": "28.1.1",
-    "mocha": "10.0.0"
+    "check-outdated": "^2.11.0",
+    "eslint": "^8.44.0",
+    "jest": "^25.0.0",
+    "mocha": "10.2.0"
   }
 }
