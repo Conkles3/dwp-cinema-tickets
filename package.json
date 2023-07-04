@@ -10,8 +10,7 @@
     "test": "mocha \"tests/**/*.test.js\"",
     "security:outdated-packages": "check-outdated --ignore-pre-releases --columns name,type,current,latest",
     "ncu": "npx npm-check-updates -u",
-    "lint": "eslint init",
-    "start": "node app.js"
+    "lint": "eslint --fix"
   },
   "devDependencies": {
     "chai": "^4.3.7",
@@ -24,7 +23,6 @@
   },
   "dependencies": {
     "eslint-plugin-mocha": "^10.1.0",
-    "prompt-sync": "^4.2.0",
     "sinon": "^15.2.0"
   }
 }
