@@ -4,9 +4,9 @@ A code test for DWP with cinema tickets.
 
 ## What this does
 
-- This project has a TicketService class which takes an account ID and any number of TicketTypeRequest objects in order to purchase cinema tickets.
+- This project has a TicketService class which takes an account ID and any number of TicketTypeRequest objects to purchase cinema tickets.
 
-- The TicketService will total and validate the the tickets and call third party functions to complete payments and assign seats. 
+- The TicketService will total and validate the tickets and call the third party functions to complete payments and assign seats. 
 
 ## Getting started
 
