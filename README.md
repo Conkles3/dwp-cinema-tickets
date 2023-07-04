@@ -12,7 +12,7 @@ A code test for DWP with cinema tickets.
 
 1. Run `nvm use` to ensure you are running against the desired npm version
 2. Run `npm ci` to install the dependencies
-3. Run `npm test` to run tests to validate teh functionality
+3. Run `npm test` to run tests to validate the functionality
 
 ## Assumptions
 
